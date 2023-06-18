@@ -1,1 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2023-06-18_CW_K8_What_is_between</title>
+</head>
+
+<body>
+
+    <script>
+
+        //         DESCRIPTION:
+
+        // Complete the function that takes two integers (a, b, where a < b) 
+        // and return an array of all integers between the input parameters, including them.
+
+        // For example:
+
+        // a = 1
+        // b = 4
+        // --> [1, 2, 3, 4]
+
+
+        // My version
+
+        // const between = (a, b) => {
+        //     let res = [a]
+        //     for (let i = 1; a + i <= b; i++) {
+        //         res.push(a + i);
+        //     }
+        //     return res;
+        // }
+
+
+        // console.log(between(1, 4));
+        // console.log(between(-2, 2));
+
+
+        // // Other version with a silimar logic
+
+        // const between2 = (a, b) => {
+        //     let res = [];
+        //     for (let i = a; i <= b; i++) {
+        //         res.push(i);
+        //     }
+        //     return res;
+        // }
+
+
+        // console.log(between2(1, 4));
+        // console.log(between2(-2, 2));
+
+
+        // // Another version with a silimar logic
+
+        // const between3 = (a, b) => {
+        //     let res = [];
+        //     for (a; a <= b; a++) {
+        //         res.push(a);
+        //     }
+        //     return res;
+        // }
+
+
+        // console.log(between3(1, 4));
+        // console.log(between3(-2, 2));
+
+
+        // // A more advanced solution
+
+        // const between4 = (a, b) => [...Array(b - a + 1)].map((_, i) => a + i)
+
+
+        // console.log(between4(1, 4));
+        // console.log(between4(-2, 2));
+
+
+        // Another very advanced solution
+
+        const between5 = (a, b) => Array.from(new Array(b-a+1), (_, i) => a + i);
+        // Alternative way to code the same thing
+        // const between5 = (a, b) => Array.from({length:(b-a+1)}, (_, i) => a + i);
+
+
+        console.log(between5(1, 4));
+        console.log(between5(-2, 2));
+
+    </script>
+
+</body>
+
+</html>
